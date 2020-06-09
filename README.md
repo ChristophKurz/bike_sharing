@@ -1,15 +1,14 @@
 ### Date created
-Include the date you created this project and README file.
+09.06.2020
 
 ### Project Title
-Replace the Project Title
+Bike Sharing
 
 ### Description
-Describe what your project is about and what it does
+Evaluation of Bike Sharing DIVVY usage in three major US cities. Chicago, New York City and Washington D.C.
 
 ### Files used
-Include the files used
+DIVVY data
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+https://en.wikipedia.org/wiki/Divvy
