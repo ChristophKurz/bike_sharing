@@ -2,7 +2,7 @@
 09.06.2020
 
 ### Project Title
-Bike Sharing
+Bike Sharing Project for DIVVY
 
 ### Description
 Evaluation of Bike Sharing DIVVY usage in three major US cities. Chicago, New York City and Washington D.C.
