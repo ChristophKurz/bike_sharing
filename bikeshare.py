@@ -182,10 +182,10 @@ def main():
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
-        time_stats(df)
-        station_stats(df)
-        trip_duration_stats(df)
-        user_stats(df)
+        time_stats(df) #Displays statistics on the most frequent times of travel.
+        station_stats(df) #Displays statistics on the most popular stations and trip.
+        trip_duration_stats(df) #Displays statistics on the total and average trip duration.
+        user_stats(df) #Displays statistics on bikeshare users. ATTENTION: User Stats are confidential
         i = 0
         df = pd.DataFrame(df)
         while True:
