@@ -53,7 +53,7 @@ def get_filters():
 def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
-    
+
     Args:
         (str) city - name of the city to analyze
         (str) month - name of the month to filter by, or "all" to apply no month filter
@@ -62,9 +62,9 @@ def load_data(city, month, day):
         df - Pandas DataFrame containing city data filtered by month and day
     """
     print('You are now looking at data for:\n City: {}\n Month: {}\n Day: {}\n\n'.format(city, month, day))
-    
+
     df = pd.read_csv(CITY_DATA[city])
-    
+
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['End Time'] = pd.to_datetime(df['End Time'])
 
@@ -78,7 +78,7 @@ def load_data(city, month, day):
     if month != 'all':
         # use the index of the months list to get the corresponding int
         month = MONTHS.index(month)+1
-    
+
         # filter by month to create the new dataframe
         df = df[df['month']==month]
 
@@ -134,7 +134,7 @@ def trip_duration_stats(df):
 
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
-    
+
     # display total travel time
     print('In total, customers used the bike sharing for: ', (df['Trip Duration'].sum()/3600).round(2),'h')
 
@@ -181,10 +181,10 @@ def main():
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
-        time_stats(df)
-        station_stats(df)
-        trip_duration_stats(df)
-        user_stats(df)
+        time_stats(df) #Displays statistics on the most frequent times of travel.
+        station_stats(df) #Displays statistics on the most popular stations and trip.
+        trip_duration_stats(df) #Displays statistics on the total and average trip duration.
+        user_stats(df) #Displays statistics on bikeshare users. ATTENTION: User Stats are confidential
         i = 0
         df = pd.DataFrame(df)
         while True:
@@ -192,7 +192,7 @@ def main():
                 more = str(input('Would you like to see raw data of your selection? Enter yes or no. \n'))
             else:
                 more = str(input('Would you like to see more? Enter yes or no. \n'))
-                
+
             if more.lower() == 'yes':
                 print(df.iloc[i:i+5])
                 i = i+5
